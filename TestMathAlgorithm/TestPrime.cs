@@ -7,6 +7,8 @@ namespace TestMathAlgorithm;
 [TestClass]
 public class TestPrime
 {
+    public static int GlobalNumber { get; set; }
+
     public static bool IsPrime(int naturalNum)
     {
         if (naturalNum < 1)
@@ -32,6 +34,18 @@ public class TestPrime
         return true;
     }
 
+    [TestInitialize]
+    public void Initialize()
+    {
+        GlobalNumber = 1;
+    }
+
+    [TestCleanup]
+    public void Cleanup()
+    {
+        GlobalNumber = -1;
+    }
+
     [TestMethod]
     [DataRow(2, 3, 5, 7)]
     public void TestPrimeNumbersLessThen10(params int[] nums)
@@ -44,8 +58,11 @@ public class TestPrime
 
     [TestMethod]
     [DataRow(1, 4, 6, 8, 9)]
+    [Description("10보다 작은 소수에 대해서 테스트합니다.")]
     public void TestCompositeNumbersLessThen10(params int[] nums)
     {
+        CollectionAssert.AllItemsAreUnique(nums);
+
         foreach (int num in nums)
         {
             Assert.IsFalse(IsPrime(num));
@@ -56,6 +73,8 @@ public class TestPrime
     [DataRow(-9, -8, -7, -6, -5, -4, -3, -2, -1)]
     public void TestNegativeNumbersBiggerThanMinus10(params int[] nums)
     {
+        CollectionAssert.AllItemsAreUnique(nums);
+
         foreach (int num in nums)
         {
             Assert.ThrowsException<ArgumentException>(() => IsPrime(num));
@@ -86,6 +105,28 @@ public class TestPrime
     [Ignore("IgnoreAttribute를 테스트하기 위한 용도입니다. 경고로 감지되면 정상입니다.")]
     public void TestIgnore()
     {
+        // 실행되면 실패합니다.
         Assert.Fail();
+    }
+
+    [TestMethod]
+    public void AssemblyInitializeTest()
+    {
+        Assert.AreEqual(AssemblyInitialize.GlobalNumber, 1);
+        AssemblyInitialize.GlobalNumber = 2;
+    }
+
+    [TestMethod]
+    public void TestInitializeTest1()
+    {
+        Assert.AreEqual(GlobalNumber, 1);
+        GlobalNumber = 100;
+    }
+
+    [TestMethod]
+    public void TestInitializeTest2()
+    {
+        Assert.AreEqual(GlobalNumber, 1);
+        GlobalNumber = 200;
     }
 }
