@@ -12,11 +12,11 @@ namespace TestOOP
         [TestMethod]
         public void TestValueType()
         {
-#pragma warning disable CS0183, CS0184
+#pragma warning disable CS0183, CS0184, IDE0150
             int myNumber = 5;
             Assert.IsTrue(myNumber is object);
             Assert.IsTrue(myNumber is ValueType);
-#pragma warning restore CS0183, CS0184
+#pragma warning restore CS0183, CS0184, IDE0150
         }
 
         [TestMethod]

@@ -52,7 +52,6 @@ namespace TestOOP
             Assert.IsTrue(personTypeStudent is Student);
         }
 
-
         [TestMethod]
         public void TestAsOperator()
         {
