@@ -35,13 +35,13 @@ public class TestPrime
     }
 
     [TestInitialize]
-    public void Initialize()
+    public void TestInitialize()
     {
         GlobalNumber = 1;
     }
 
     [TestCleanup]
-    public void Cleanup()
+    public void TestCleanup()
     {
         GlobalNumber = -1;
     }
@@ -110,10 +110,10 @@ public class TestPrime
     }
 
     [TestMethod]
-    public void AssemblyInitializeTest()
+    public void TestAssemblyInitialize()
     {
-        Assert.AreEqual(AssemblyInitialize.GlobalNumber, 1);
-        AssemblyInitialize.GlobalNumber = 2;
+        Assert.AreEqual(AssemblyInitializer.GlobalNumber, 1);
+        AssemblyInitializer.GlobalNumber = 2;
     }
 
     [TestMethod]

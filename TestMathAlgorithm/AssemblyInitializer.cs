@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace TestMathAlgorithm;
 
 [TestClass]
-public class AssemblyInitialize
+public class AssemblyInitializer
 {
     public static int GlobalNumber { get; set; }
 
