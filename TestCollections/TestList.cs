@@ -6,7 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 public class TestList
 {
     [TestMethod]
-    public void TestIntList()
+    public void IntList()
     {
         const int ELEMENT_COUNT = 10;
 

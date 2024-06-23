@@ -30,7 +30,7 @@ namespace TestOOP
         /// // 파생 클래스로 캐스팅하면 예외가 발생한다.
         /// </summary>
         [TestMethod]
-        public void TestCastBaseInstanceToDerivedType()
+        public void CastBaseInstanceToDerivedType()
         {
             Person person = new Person("Jane", 20);
 
@@ -41,7 +41,7 @@ namespace TestOOP
         }
 
         [TestMethod]
-        public void TestIsOperator()
+        public void IsOperator()
         {
             Person personTypePerson = new Person("Jane", 20);
             Assert.IsTrue(personTypePerson is Person);
@@ -53,7 +53,7 @@ namespace TestOOP
         }
 
         [TestMethod]
-        public void TestAsOperator()
+        public void AsOperator()
         {
             Person personTypePerson = new Person("Jane", 20);
             Person personTypeStudent = new Student("Mike", 22, 90);

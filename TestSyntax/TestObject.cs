@@ -4,7 +4,7 @@ namespace TestSyntax
     public class TestObject
     {
         [TestMethod]
-        public void TestNumberGetHashCode()
+        public void NumberGetHashCode()
         {
             int randomNumber = new Random().Next();
 

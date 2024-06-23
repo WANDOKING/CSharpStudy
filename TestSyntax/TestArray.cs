@@ -4,7 +4,7 @@
     public class TestArray
     {
         [TestMethod]
-        public void TestArrayProperties()
+        public void ArrayProperties()
         {
             int[] arr1 = { 1, 2, 3, 4, 5 };
             Assert.AreEqual(arr1.Rank, 1);
@@ -16,7 +16,7 @@
         }
 
         [TestMethod]
-        public void TestIndexOutOfRangeException()
+        public void IndexOutOfRangeException()
         {
             int[] array = { 1, 2, 3, 4, 5 };
 
@@ -27,7 +27,7 @@
         }
 
         [TestMethod]
-        public void TestCopy()
+        public void Copy()
         {
             byte[] randomBytes1 = new byte[100];
             byte[] randomBytes2 = new byte[100];
@@ -41,7 +41,7 @@
         }
 
         [TestMethod]
-        public void TestSort()
+        public void Sort()
         {
             byte[] randomBytes = new byte[100];
 

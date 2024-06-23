@@ -5,7 +5,7 @@
     {
         [TestMethod]
         [ExpectedException(typeof(Exception))]
-        public void TestTryCatch()
+        public void TryCatch()
         {
             throw new Exception();
         }

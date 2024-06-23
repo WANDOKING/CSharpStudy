@@ -10,7 +10,7 @@ namespace TestOOP
     public class TestType
     {
         [TestMethod]
-        public void TestValueType()
+        public void ValueType()
         {
 #pragma warning disable CS0183, CS0184, IDE0150
             int myNumber = 5;
@@ -20,7 +20,7 @@ namespace TestOOP
         }
 
         [TestMethod]
-        public void TestReferenceType()
+        public void ReferenceType()
         {
 #pragma warning disable CS0183, CS0184
             string myString = "Hello";
