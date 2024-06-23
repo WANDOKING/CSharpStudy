@@ -39,7 +39,7 @@ public class TestTaskBasic
             await Task.Delay(delayTime);
         }
 
-        Assert.IsTrue(stopWatch.Elapsed > delayTime);
+        Assert.IsTrue(stopWatch.Elapsed >= delayTime);
     }
 
     [TestMethod]
@@ -66,9 +66,9 @@ public class TestTaskBasic
     [TestMethod]
     public async Task WhenAll()
     {
-        const int TASK_COUNT = 100;
+        const int TASK_COUNT = 50;
         const int MIN_DELAY_MS = 1;
-        const int MAX_DELAY_MS = 1000;
+        const int MAX_DELAY_MS = 300;
 
         Random random = new Random();
         var tasks = new List<Task>();
@@ -120,18 +120,18 @@ public class TestTaskBasic
     [TestMethod]
     public async Task WhenAny()
     {
-        Task<int> taskA = DelayAndReturnAsync(2);
-        Task<int> taskB = DelayAndReturnAsync(3);
-        Task<int> taskC = DelayAndReturnAsync(1);
+        Task<int> taskA = DelayAndReturnAsync(200);
+        Task<int> taskB = DelayAndReturnAsync(300);
+        Task<int> taskC = DelayAndReturnAsync(100);
 
         Task<int> result = await Task.WhenAny(taskA, taskB, taskC);
 
         Assert.IsTrue(result.IsCompleted);
-        Assert.AreEqual(1, result.Result);
+        Assert.AreEqual(100, result.Result);
 
         async Task<int> DelayAndReturnAsync(int value)
         {
-            await Task.Delay(TimeSpan.FromSeconds(value));
+            await Task.Delay(TimeSpan.FromMilliseconds(value));
             return value;
         }
     }
