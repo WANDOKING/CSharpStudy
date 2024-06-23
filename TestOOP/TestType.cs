@@ -28,5 +28,18 @@ namespace TestOOP
             Assert.IsFalse(myString is ValueType);
 #pragma warning restore CS0183, CS0184
         }
+
+        [TestMethod]
+        public void MaxMinValue()
+        {
+            Assert.AreEqual(127, sbyte.MaxValue);
+            Assert.AreEqual(-128, sbyte.MinValue);
+            Assert.AreEqual(255, byte.MaxValue);
+            Assert.AreEqual(0, byte.MinValue);
+            Assert.AreEqual(32767, short.MaxValue);
+            Assert.AreEqual(-32768, short.MinValue);
+            Assert.AreEqual(65535, ushort.MaxValue);
+            Assert.AreEqual(0, ushort.MinValue);
+        }
     }
 }
