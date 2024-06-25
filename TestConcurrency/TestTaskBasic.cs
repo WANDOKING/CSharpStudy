@@ -91,7 +91,7 @@ public class TestTaskBasic
             Assert.IsTrue(task.IsCompleted);
         }
 
-        Assert.IsTrue(stopWatch.Elapsed >= TimeSpan.FromMilliseconds(MAX_DELAY_MS));
+        Assert.IsTrue(stopWatch.Elapsed >= TimeSpan.FromMilliseconds(MAX_DELAY_MS), $"stopWatch.Elapsed = {stopWatch.Elapsed}");
     }
 
     [TestMethod]
