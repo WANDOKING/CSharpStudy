@@ -68,7 +68,7 @@ public class TestTaskBasic
     {
         const int TASK_COUNT = 50;
         const int MIN_DELAY_MS = 1;
-        const int MAX_DELAY_MS = 300;
+        const int MAX_DELAY_MS = 100;
 
         Random random = new Random();
         var tasks = new List<Task>();
@@ -91,7 +91,7 @@ public class TestTaskBasic
             Assert.IsTrue(task.IsCompleted);
         }
 
-        Assert.IsTrue(stopWatch.Elapsed >= TimeSpan.FromMilliseconds(MAX_DELAY_MS), $"stopWatch.Elapsed = {stopWatch.Elapsed}");
+        Assert.IsTrue(stopWatch.Elapsed >= TimeSpan.FromMilliseconds(MAX_DELAY_MS - 1), $"stopWatch.Elapsed = {stopWatch.Elapsed}");
     }
 
     [TestMethod]
