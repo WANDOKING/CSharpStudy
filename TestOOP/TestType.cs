@@ -41,5 +41,19 @@ namespace TestOOP
             Assert.AreEqual(65535, ushort.MaxValue);
             Assert.AreEqual(0, ushort.MinValue);
         }
+
+        [TestMethod]
+        public void DefaultValue()
+        {
+            int defaultIntValue = default;
+            bool defaultBoolValue = default;
+            double defaultDoubleValue = default;
+            string? defaultStringValue = default;
+
+            Assert.AreEqual(0, defaultIntValue);
+            Assert.AreEqual(false, defaultBoolValue);
+            Assert.AreEqual(0.0, defaultDoubleValue);
+            Assert.AreEqual(null, defaultStringValue);
+        }
     }
 }
