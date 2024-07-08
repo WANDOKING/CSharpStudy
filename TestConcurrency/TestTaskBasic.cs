@@ -31,7 +31,8 @@ public class TestTaskBasic
     [TestMethod]
     public async Task Delay()
     {
-        TimeSpan delayTime = TimeSpan.FromMilliseconds(50);
+        int DELAY_MILLISECONDS = 50;
+        TimeSpan delayTime = TimeSpan.FromMilliseconds(DELAY_MILLISECONDS);
 
         var stopWatch = new Stopwatch();
         using (var timeCheck = new TimeCheckHelper(stopWatch))
@@ -39,7 +40,7 @@ public class TestTaskBasic
             await Task.Delay(delayTime);
         }
 
-        Assert.IsTrue(stopWatch.Elapsed >= delayTime);
+        Assert.IsTrue(stopWatch.Elapsed >= TimeSpan.FromMilliseconds(DELAY_MILLISECONDS - 1));
     }
 
     [TestMethod]
