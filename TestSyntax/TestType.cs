@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TestOOP
+﻿namespace TestOOP
 {
     [TestClass]
     public class TestType
@@ -54,6 +48,14 @@ namespace TestOOP
             Assert.AreEqual(false, defaultBoolValue);
             Assert.AreEqual(0.0, defaultDoubleValue);
             Assert.AreEqual(null, defaultStringValue);
+        }
+
+        [TestMethod]
+        public void OverflowCast()
+        {
+            int intValue = -1;
+            uint uIntValue = (uint)intValue;
+            Assert.AreEqual(uint.MaxValue, uIntValue);
         }
     }
 }
