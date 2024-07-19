@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TestBCL;
+namespace TestBCL.Time;
 
 [TestClass]
 public class TestTimeSpan

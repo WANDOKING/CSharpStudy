@@ -1,7 +1,6 @@
-using System;
 using System.Globalization;
 
-namespace TestBCL;
+namespace TestBCL.Time;
 
 [TestClass]
 public class TestDateTime
@@ -16,11 +15,11 @@ public class TestDateTime
     public void Create()
     {
         DateTime dateTime = new DateTime(
-            year: 2024, 
-            month: 7, 
-            day: 14, 
-            hour: 15, 
-            minute: 10, 
+            year: 2024,
+            month: 7,
+            day: 14,
+            hour: 15,
+            minute: 10,
             second: 24);
 
         Assert.AreEqual(2024, dateTime.Year);
@@ -36,7 +35,7 @@ public class TestDateTime
     public void MinMax()
     {
         DateTime minDateTime = DateTime.MinValue;
-        
+
         // 그레고리오력의 00:00:00.0000000 UTC, 0001년 1월 1일
         Assert.AreEqual("0001-01-01 오전 12:00:00", minDateTime.ToString());
         Assert.AreEqual(0, minDateTime.Ticks);
