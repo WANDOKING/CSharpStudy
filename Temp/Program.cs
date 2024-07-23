@@ -1,12 +1,9 @@
-﻿using System.Diagnostics;
+﻿namespace Temp;
 
-namespace Temp
+internal class Program
 {
-    internal class Program
+    private static void Main()
     {
-        private static void Main()
-        {
 
-        }
     }
 }
