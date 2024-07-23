@@ -138,11 +138,12 @@ public class TestTaskBasic
     }
 
     [TestMethod]
+    [Description("타이밍 의존성이 있어서 시간이 짧아지면 실패할 수도 있습니다.")]
     public async Task ProcessWhenTaskCompleted()
     {
-        Task<int> taskA = DelayAndReturnAsync(2);
-        Task<int> taskB = DelayAndReturnAsync(3);
-        Task<int> taskC = DelayAndReturnAsync(1);
+        Task<int> taskA = DelayAndReturnAsync(200);
+        Task<int> taskB = DelayAndReturnAsync(300);
+        Task<int> taskC = DelayAndReturnAsync(100);
         Task<int>[] tasks = new[] { taskA, taskB, taskC };
 
         var results = new ConcurrentQueue<int>();
@@ -161,13 +162,13 @@ public class TestTaskBasic
         results.TryDequeue(out var result2);
         results.TryDequeue(out var result3);
 
-        Assert.AreEqual(1, result1);
-        Assert.AreEqual(2, result2);
-        Assert.AreEqual(3, result3);
+        Assert.AreEqual(100, result1);
+        Assert.AreEqual(200, result2);
+        Assert.AreEqual(300, result3);
 
         async Task<int> DelayAndReturnAsync(int value)
         {
-            await Task.Delay(TimeSpan.FromSeconds(value));
+            await Task.Delay(TimeSpan.FromMilliseconds(value));
             return value;
         }
     }

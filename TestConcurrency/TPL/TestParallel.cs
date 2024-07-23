@@ -103,7 +103,7 @@ public class TestParallel
 
         _ = Task.Run(async () =>
         {
-            await Task.Delay(1);
+            await Task.Yield();
             cts.Cancel();
         });
 
