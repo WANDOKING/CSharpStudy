@@ -1,6 +1,6 @@
-﻿using System.Threading.Tasks.Dataflow;
+﻿namespace TestConcurrency.TPL;
 
-namespace TestConcurrency;
+using System.Threading.Tasks.Dataflow;
 
 [TestClass]
 public class TestDataflow

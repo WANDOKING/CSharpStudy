@@ -1,4 +1,4 @@
-﻿namespace TestConcurrency;
+﻿namespace TestConcurrency.TPL;
 
 [TestClass]
 public class TestParallel
@@ -8,7 +8,7 @@ public class TestParallel
     {
         int primeNumberCount = 0;
 
-        Parallel.For(2, 10000, (int number) =>
+        Parallel.For(2, 10000, (number) =>
         {
             if (IsPrime(number))
             {
@@ -46,7 +46,7 @@ public class TestParallel
             numbers.Add(i);
         }
 
-        Parallel.ForEach(numbers, (int number) =>
+        Parallel.ForEach(numbers, (number) =>
         {
             if (IsPrime(number))
             {
@@ -118,7 +118,7 @@ public class TestParallel
         int sum = 0;
 
         List<Action> actions = new List<Action>();
-        
+
         for (int i = 0; i < ACTIONS_COUNT; ++i)
         {
             actions.Add(() => Interlocked.Increment(ref sum));
