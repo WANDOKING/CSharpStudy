@@ -26,6 +26,6 @@ public class TestStopwatch
         Thread.Sleep(SLEEP_TIME_MS);
         watch.Stop();
 
-        Assert.IsTrue(watch.ElapsedMilliseconds > SLEEP_TIME_MS);
+        Assert.IsTrue(watch.ElapsedMilliseconds > SLEEP_TIME_MS, $"watch.ElapsedMilliseconds = {watch.ElapsedMilliseconds}");
     }
 }
