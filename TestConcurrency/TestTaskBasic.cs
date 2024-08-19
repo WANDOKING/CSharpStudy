@@ -9,22 +9,6 @@ using System.Threading.Tasks;
 
 namespace TestConcurrency;
 
-public class TimeCheckHelper : IDisposable
-{
-    private Stopwatch mStopwatch;
-
-    public TimeCheckHelper(Stopwatch stopwatch)
-    {
-        mStopwatch = stopwatch;
-        mStopwatch.Start();
-    }
-
-    public void Dispose()
-    {
-        mStopwatch.Stop();
-    }
-}
-
 [TestClass]
 public class TestTaskBasic
 {
@@ -34,11 +18,9 @@ public class TestTaskBasic
         int DELAY_MILLISECONDS = 50;
         TimeSpan delayTime = TimeSpan.FromMilliseconds(DELAY_MILLISECONDS);
 
-        var stopWatch = new Stopwatch();
-        using (var timeCheck = new TimeCheckHelper(stopWatch))
-        {
-            await Task.Delay(delayTime);
-        }
+        var stopWatch = Stopwatch.StartNew();
+        await Task.Delay(delayTime);
+        stopWatch.Stop();
 
         Assert.IsTrue(stopWatch.Elapsed >= TimeSpan.FromMilliseconds(DELAY_MILLISECONDS - 1));
     }
@@ -74,8 +56,7 @@ public class TestTaskBasic
         Random random = new Random();
         var tasks = new List<Task>();
 
-        var stopWatch = new Stopwatch();
-        using (var timeCheck = new TimeCheckHelper(stopWatch))
+        var stopWatch = Stopwatch.StartNew();
         {
             for (int i = 0; i < TASK_COUNT - 1; ++i)
             {
@@ -86,6 +67,7 @@ public class TestTaskBasic
 
             await Task.WhenAll(tasks);
         }
+        stopWatch.Stop();
 
         foreach (var task in tasks)
         {
