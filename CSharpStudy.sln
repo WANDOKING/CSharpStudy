@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BenchmarkStringBuilder", "B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestMsTest", "TestMsTest\TestMsTest.csproj", "{D7C03CB7-7B61-42FC-82A1-43A040C176E1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BenchmarkCompression", "BenchmarkCompression\BenchmarkCompression.csproj", "{3C774AC8-058A-40B2-842F-F8B37110A588}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -85,6 +87,10 @@ Global
 		{D7C03CB7-7B61-42FC-82A1-43A040C176E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7C03CB7-7B61-42FC-82A1-43A040C176E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7C03CB7-7B61-42FC-82A1-43A040C176E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C774AC8-058A-40B2-842F-F8B37110A588}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C774AC8-058A-40B2-842F-F8B37110A588}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C774AC8-058A-40B2-842F-F8B37110A588}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C774AC8-058A-40B2-842F-F8B37110A588}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -100,6 +106,7 @@ Global
 		{1A61E5AD-605F-4257-8C1E-45BE1044C0F2} = {4B6FFBDD-4FB9-4443-A23E-537204C5403C}
 		{6DC4C158-415F-45A8-9087-5BBA39A9B5E9} = {4B6FFBDD-4FB9-4443-A23E-537204C5403C}
 		{5064DF88-A1E2-44AA-B9B2-ED77A47B8B73} = {6126EF8A-628B-4603-BF64-4DF46D62AC93}
+		{3C774AC8-058A-40B2-842F-F8B37110A588} = {6126EF8A-628B-4603-BF64-4DF46D62AC93}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {66BB5C5D-B306-41C1-8A78-23B5D63971C8}
