@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BenchmarkStringBuilder;
 
-internal class Program
+internal class Runner
 {
     static void Main(string[] args)
     {
