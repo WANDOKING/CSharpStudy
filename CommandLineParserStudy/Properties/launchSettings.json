@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "CommandLineParserStudy": {
+      "commandName": "Project",
+      "commandLineArgs": "hello good --option=my_option"
+    }
+  }
+}

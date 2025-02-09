@@ -47,6 +47,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{85F0
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Network", "Network", "{D47AA3D3-83E8-4E7A-9FD8-58AD7EA2A99B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandLineParserStudy", "CommandLineParserStudy\CommandLineParserStudy.csproj", "{5735BF8A-511C-4013-9E81-E0B31BA15882}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -125,6 +127,10 @@ Global
 		{AAB405E9-D981-47E9-941F-4C8C4A5B9EC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AAB405E9-D981-47E9-941F-4C8C4A5B9EC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AAB405E9-D981-47E9-941F-4C8C4A5B9EC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5735BF8A-511C-4013-9E81-E0B31BA15882}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5735BF8A-511C-4013-9E81-E0B31BA15882}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5735BF8A-511C-4013-9E81-E0B31BA15882}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5735BF8A-511C-4013-9E81-E0B31BA15882}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -145,6 +151,7 @@ Global
 		{564C8EBC-75BB-4EB8-B299-149E1EF13624} = {D47AA3D3-83E8-4E7A-9FD8-58AD7EA2A99B}
 		{C9959750-9EBD-4F77-8905-E09F065939EB} = {6126EF8A-628B-4603-BF64-4DF46D62AC93}
 		{AAB405E9-D981-47E9-941F-4C8C4A5B9EC9} = {85F0A6C2-31A9-4A20-9669-6FC33E885CEB}
+		{5735BF8A-511C-4013-9E81-E0B31BA15882} = {85F0A6C2-31A9-4A20-9669-6FC33E885CEB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {66BB5C5D-B306-41C1-8A78-23B5D63971C8}
