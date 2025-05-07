@@ -51,6 +51,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandLineParserStudy", "C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewtonsoftJsonStudy", "NewtonsoftJsonStudy\NewtonsoftJsonStudy.csproj", "{DF1A4DD6-D6E6-429F-B566-1835F3965967}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BenchmarkArrayPool", "BenchmarkArrayPool\BenchmarkArrayPool.csproj", "{7F88FD87-854A-4A83-AAED-EA46D6A7DE12}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -137,6 +139,10 @@ Global
 		{DF1A4DD6-D6E6-429F-B566-1835F3965967}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF1A4DD6-D6E6-429F-B566-1835F3965967}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF1A4DD6-D6E6-429F-B566-1835F3965967}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F88FD87-854A-4A83-AAED-EA46D6A7DE12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F88FD87-854A-4A83-AAED-EA46D6A7DE12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F88FD87-854A-4A83-AAED-EA46D6A7DE12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F88FD87-854A-4A83-AAED-EA46D6A7DE12}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -159,6 +165,7 @@ Global
 		{AAB405E9-D981-47E9-941F-4C8C4A5B9EC9} = {85F0A6C2-31A9-4A20-9669-6FC33E885CEB}
 		{5735BF8A-511C-4013-9E81-E0B31BA15882} = {85F0A6C2-31A9-4A20-9669-6FC33E885CEB}
 		{DF1A4DD6-D6E6-429F-B566-1835F3965967} = {85F0A6C2-31A9-4A20-9669-6FC33E885CEB}
+		{7F88FD87-854A-4A83-AAED-EA46D6A7DE12} = {6126EF8A-628B-4603-BF64-4DF46D62AC93}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {66BB5C5D-B306-41C1-8A78-23B5D63971C8}
